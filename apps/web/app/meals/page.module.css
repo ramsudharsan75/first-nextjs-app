@@ -1,0 +1,35 @@
+.header {
+  @apply gap-12 my-12 mx-auto mb-20 w-[90%] max-w-[75rem] text-[#ddd6cb] text-2xl;
+}
+
+.header h1 {
+  @apply font-['Montserrat',_sans-serif];
+}
+
+.highlight {
+  @apply bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent;
+}
+
+.header p {
+  @apply m-0;
+}
+
+.cta a {
+  @apply inline-block mt-4 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f9572a] to-[#ff9b05] text-white font-bold no-underline;
+}
+
+.loading {
+  @apply text-center animate-[loading_1.2s_ease-in-out_infinite];
+}
+
+@keyframes loading {
+  0% {
+    color: #e9e9e9;
+  }
+  50% {
+    color: #b89b84;
+  }
+  100% {
+    color: #e9e9e9;
+  }
+}

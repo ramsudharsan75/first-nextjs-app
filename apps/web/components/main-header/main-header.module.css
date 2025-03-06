@@ -1,0 +1,21 @@
+.header {
+  @apply flex justify-between items-center px-4 py-8;
+}
+
+@media (min-width: 768px) {
+  .header {
+    @apply px-[10%] py-8;
+  }
+}
+
+.nav ul {
+  @apply m-0 p-0 flex gap-6 text-xl;
+}
+
+.logo {
+  @apply flex items-center justify-center gap-8 no-underline text-[#ddd6cb] font-bold font-montserrat tracking-[0.15rem] uppercase text-2xl;
+}
+
+.logo img {
+  @apply w-20 h-20 object-contain drop-shadow-[0_0_0.75rem_rgba(0,0,0,0.5)];
+}

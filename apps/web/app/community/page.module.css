@@ -1,0 +1,35 @@
+.header {
+  @apply gap-12 my-12 mb-20 w-[90%] max-w-[75rem] mx-auto text-[#ddd6cb] text-2xl text-center;
+}
+
+.header h1 {
+  @apply font-['Montserrat',_sans-serif];
+}
+
+.highlight {
+  @apply bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent;
+}
+
+.main {
+  @apply w-[90%] max-w-[40rem] mx-auto text-center;
+}
+
+.main h2 {
+  @apply font-['Montserrat',_sans-serif] text-4xl mb-12 text-[#ddd6cb];
+}
+
+.perks {
+  @apply list-none my-12 p-0;
+}
+
+.perks li {
+  @apply flex flex-col items-center gap-8;
+}
+
+.perks img {
+  @apply w-32 h-32 object-contain;
+}
+
+.perks p {
+  @apply font-['Montserrat',_sans-serif] text-2xl font-bold m-0 text-[#ddd6cb];
+}

@@ -1,0 +1,7 @@
+.headerBackground {
+  @apply absolute w-full h-[320px] top-0 left-0 -z-10;
+}
+
+.headerBackground svg {
+  @apply block w-full h-auto;
+}
