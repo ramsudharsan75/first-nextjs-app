@@ -28,7 +28,7 @@
 
   .not-found h1,
   .error h1 {
-    @apply text-[5rem] m-0 font-[900] text-[#262626] uppercase font-montserrat;
+    @apply text-[3rem] m-0 font-[900] text-[#262626] uppercase font-montserrat;
     background: linear-gradient(90deg, #f9572a, #ffc905);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
