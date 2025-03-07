@@ -1,0 +1,93 @@
+.header {
+  @apply flex p-8 gap-12 mx-auto max-w-[80rem];
+}
+
+.image {
+  @apply relative w-[30rem] h-[20rem];
+}
+
+.header img {
+  @apply object-cover rounded-lg shadow-[0_0_0.5rem_rgba(0,0,0,0.5)];
+  animation: fade-slide-in-from-left 1s ease-out forwards;
+}
+
+.headerText {
+  @apply p-[0.5rem_1rem_0_1rem] text-[#ddd6cb] max-w-[40rem];
+  animation: fade-slide-in-from-right 1s ease-out forwards;
+}
+
+.headerText h1 {
+  @apply m-0 text-[3rem] uppercase font-['Montserrat',sans-serif] shadow-[0_0_0.5rem_rgba(0,0,0,0.5)];
+}
+
+.creator {
+  @apply text-[1.5rem] text-[#cfa69b] italic;
+}
+
+.creator a {
+  @apply bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent;
+}
+
+.creator a:hover,
+.creator a:active {
+  @apply bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent shadow-[0_0_18px_rgba(248,190,42,0.8)];
+}
+
+.summary {
+  @apply text-[1.5rem];
+}
+
+.instructions {
+  @apply text-[1.25rem] leading-relaxed bg-[#6e6464] text-[#13120f] rounded-lg shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] p-8 max-w-[60rem] mx-auto my-8;
+  animation: fade-slide-in-from-bottom 1s ease-out forwards;
+}
+
+.loading {
+  @apply text-[3rem] text-center text-[#ddd6cb] font-bold;
+  animation: flash 1s ease-in-out infinite alternate;
+}
+
+@keyframes fade-slide-in-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-in-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-in-from-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
