@@ -7,7 +7,7 @@ function isInvalidText(text: string) {
   return !text || text.trim() === "";
 }
 
-export default async function shareMeal(formData: FormData) {
+export default async function shareMeal(prevState: { message: string }, formData: FormData) {
   const meal = {
     title: formData.get("title") as string,
     slug: formData.get("title") as string,
@@ -28,7 +28,9 @@ export default async function shareMeal(formData: FormData) {
     !meal.image || 
     meal.image.size === 0
   ) {
-    throw new Error("Invalid input");
+    return {
+      message: "Invalid input",
+    }
   }
 
   await saveMeal(meal);
