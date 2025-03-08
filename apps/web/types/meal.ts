@@ -1,7 +1,7 @@
 export type Meal = {
-  id: string;
+  id?: string;
   title: string;
-  slug: string;
+  slug?: string;
   image: string;
   summary: string;
   creator: string;
