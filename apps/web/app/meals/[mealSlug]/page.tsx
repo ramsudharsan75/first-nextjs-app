@@ -9,15 +9,27 @@ type MealDetailsPageProps = {
   };
 };
 
-export default function MealDetailsPage({ params }: MealDetailsPageProps) {
-  const meal = getMeal(params.mealSlug);
-  
+export async function generateMetadata({ params }: MealDetailsPageProps) {
+  const meal = await getMeal(params.mealSlug);
+
   if (!meal) {
     notFound();
   }
-  
-  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
+  return {
+    title: meal.title || "Meal Details",
+    description: meal.summary || "A delicious meal shared by a food-loving community.",
+  };
+}
+
+export default function MealDetailsPage({ params }: MealDetailsPageProps) {
+  const meal = getMeal(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+  }
+
+  meal.instructions = meal.instructions.replace(/\n/g, "<br />");
 
   return (
     <>

@@ -2,6 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { saveMeal } from "./meals";
+import { revalidatePath } from "next/cache";
 
 function isInvalidText(text: string) {
   return !text || text.trim() === "";
@@ -23,16 +24,17 @@ export default async function shareMeal(prevState: { message: string }, formData
     isInvalidText(meal.summary) ||
     isInvalidText(meal.instructions) ||
     isInvalidText(meal.creator) ||
-    isInvalidText(meal.creator_email) || 
+    isInvalidText(meal.creator_email) ||
     !meal.creator_email.includes("@") ||
-    !meal.image || 
+    !meal.image ||
     meal.image.size === 0
   ) {
     return {
       message: "Invalid input",
-    }
+    };
   }
 
   await saveMeal(meal);
+  revalidatePath("/meals");
   redirect("/meals");
 }
