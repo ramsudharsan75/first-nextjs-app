@@ -1,0 +1,60 @@
+.header {
+  @apply gap-12 mx-auto mt-12 mb-20 w-[90%] max-w-[75rem] text-[#ddd6cb] text-2xl;
+}
+
+.header h1 {
+  @apply font-['Montserrat',sans-serif];
+}
+
+.highlight {
+  @apply bg-gradient-to-r from-[#f9572a] to-[#ff8a05] bg-clip-text text-transparent;
+}
+
+.main {
+  @apply w-[90%] max-w-[75rem] my-12 mx-auto text-white;
+}
+
+.form {
+  @apply max-w-[50rem];
+}
+
+.form label {
+  @apply block mb-2 text-base font-['Montserrat',sans-serif] uppercase text-[#b3aea5] font-bold;
+}
+
+.form input,
+.form textarea {
+  @apply block mb-2 w-full py-2 px-4 rounded border border-[#454952] bg-[#1c2027] text-xl font-['Montserrat',sans-serif] text-[#ddd6cb];
+}
+
+.form input:focus,
+.form textarea:focus {
+  @apply outline-[#f99f2a] bg-[#1f252d];
+}
+
+.row {
+  @apply flex gap-4;
+}
+
+.row p {
+  @apply w-full;
+}
+
+.actions {
+  @apply text-right;
+}
+
+.actions button {
+  @apply border-0 py-3 px-8 bg-gradient-to-r from-[#f9572a] to-[#ff9b05] text-white rounded cursor-pointer font-[inherit] text-xl shadow-[0_2px_5px_rgba(0,0,0,0.3)];
+}
+
+.actions button:hover,
+.actions button:focus {
+  @apply bg-gradient-to-r from-[#fd4715] to-[#f9b241];
+}
+
+.actions button:disabled,
+.actions button:hover:disabled,
+.actions button:focus:disabled {
+  @apply bg-[#ccc] text-[#979797] cursor-not-allowed;
+}
